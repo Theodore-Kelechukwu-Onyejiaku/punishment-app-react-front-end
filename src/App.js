@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import  {BrowserRouter as Router, Route} from "react-router-dom";
+
+
+import Navbar from "./components/navbar.component";
+import PunishmentsList from "./components/punishment-list.component";
+import EditPunishment from "./components/edit-punishment.component";
+import CreatePunishment from "./components/create-punishment.component";
+import CreatePunishee from "./components/create-punishee.component";
+
+//We are going to import jquery from node_modules where you just copied it to
+import "jquery-3.2.1.min.js";
+
+/* We are not going to use this logo */
+//import logo from './logo.svg';
+/* We are not going to use this CSS */
+//import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Navbar />
+        <br />
+        <Route path="/" exact component = {PunishmentsList} />
+        <Route path="/edit/:id"  component = {EditPunishment} />
+        <Route path="/create"  component = {CreatePunishment} />
+        <Route path="/user" component = {CreatePunishee} />
+        <div className="">
+          <nav className="navbar fixed-bottom navbar-info bg-info">
+              <a  className="text-center  text-white navbar-brand" href="#">Theodore Loves you</a>
+          </nav>
+        </div>
+        
+      </div>
+      
+    </Router>
   );
 }
 
