@@ -131,7 +131,7 @@ export default class CreatePunishee extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Create punishment Log" className="btn btn-primary" />
+          <input type="submit" value="Create punishment" className="btn btn-primary" />
         </div>
       </form>
     </div>

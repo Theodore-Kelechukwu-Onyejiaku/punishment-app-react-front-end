@@ -151,7 +151,7 @@ export default class EditPunishee extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Edit punishment Log" className="btn btn-primary" />
+          <input type="submit" value="Edit punishment" className="btn btn-primary" />
         </div>
       </form>
     </div>

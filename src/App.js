@@ -11,6 +11,7 @@ import CreatePunishee from "./components/create-punishee.component";
 
 //We are going to import jquery from node_modules where you just copied it to
 import "jquery-3.2.1.min.js";
+import HowToUse from './components/how-to-use.component';
 
 /* We are not going to use this logo */
 //import logo from './logo.svg';
@@ -27,9 +28,10 @@ function App() {
         <Route path="/edit/:id"  component = {EditPunishment} />
         <Route path="/create"  component = {CreatePunishment} />
         <Route path="/user" component = {CreatePunishee} />
+        <Route path="/how" component = {HowToUse} />
         <div className="">
           <nav className="navbar fixed-bottom navbar-info bg-info">
-              <a  className="text-center  text-white navbar-brand" href="#">Theodore Loves you</a>
+              <a  className="text-center  text-white navbar-brand" href="#">Built Using React, NodeJS,<br/> ExpressJS, and MongoDB<br/>By Theodore Kelechukwu Onyejiaku</a>
           </nav>
         </div>
         
