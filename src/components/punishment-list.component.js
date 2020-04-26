@@ -24,7 +24,7 @@ export default class PunishmentsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/punishments/')
+    axios.get('https://punishee.herokuapp.com/punishments/')
       .then(response => {
         setTimeout(()=>{this.setState({ punishments: response.data, isLoading: false})}, 3000)
       })
@@ -34,7 +34,7 @@ export default class PunishmentsList extends Component {
   }
 
   deletePunishment(id) {
-    axios.delete('http://localhost:5000/punishments/'+id)
+    axios.delete('https://punishee.herokuapp.com/punishments/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

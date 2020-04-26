@@ -24,7 +24,7 @@ export default class EditPunishee extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/punishments/'+this.props.match.params.id)
+    axios.get('https://punishee.herokuapp.com/punishments/'+this.props.match.params.id)
       .then(response => {
         setTimeout(()=>{
             this.setState({
@@ -41,7 +41,7 @@ export default class EditPunishee extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/punishees/')
+    axios.get('https://punishee.herokuapp.com/punishees/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -91,7 +91,7 @@ export default class EditPunishee extends Component {
 
     console.log(punishment);
 
-    axios.post('http://localhost:5000/punishments/update/' + this.props.match.params.id, punishment)
+    axios.post('https://punishee.herokuapp.com/punishments/update/' + this.props.match.params.id, punishment)
       .then(res => console.log(res.data));
 
     window.location = '/';
