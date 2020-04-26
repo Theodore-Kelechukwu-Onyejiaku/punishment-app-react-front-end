@@ -132,7 +132,7 @@ export default class EditPunishee extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label>Duration (in days): </label>
           <input 
               type="text" 
               className="form-control"
