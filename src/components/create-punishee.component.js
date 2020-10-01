@@ -29,13 +29,14 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios.post('https://punishee.herokuapp.com/punishees/add', user)
-      .then(res => console.log(res.data));
+      .then(res => 
+            this.setState({
+              username: ''
+            })
+            window.location = "/"
+       );
 
-    this.setState({
-      username: ''
-    })
-
-    window.location = "/"
+    
   }
 
   render() {
