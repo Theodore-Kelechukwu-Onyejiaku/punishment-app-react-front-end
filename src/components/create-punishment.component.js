@@ -75,9 +75,9 @@ export default class CreatePunishee extends Component {
     console.log(punishment);
 
     axios.post('https://punishee.herokuapp.com/punishments/add', punishment)
-      .then(res => console.log(res.data));
+      .then(res => window.location = '/' );
 
-    window.location = '/';
+    
   }
 
   render() {
