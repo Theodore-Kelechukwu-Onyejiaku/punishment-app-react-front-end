@@ -92,9 +92,7 @@ export default class EditPunishee extends Component {
     console.log(punishment);
 
     axios.post('https://punishee.herokuapp.com/punishments/update/' + this.props.match.params.id, punishment)
-      .then(res => console.log(res.data));
-
-    window.location = '/';
+      .then(res => window.location = '/');
   }
 
   render() {
